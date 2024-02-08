@@ -33,13 +33,13 @@ for file_path in file_paths:
 print('Unique AY tags in files', unique_AY_tags)
 print('Unique non ICAO AY tags in files', unique_non_ICAO_AY_tags)
 
-prdef_AY_tags = ['UNCLASSIFIED', 'RESTRICTED', 'DANGER', 'PROHIBITED', 'CTR', 'TMZ', 'RMZ', 'TMA', 'TRA', 'TSA', 'FIR',
+predef_AY_tags = ['UNCLASSIFIED', 'RESTRICTED', 'DANGER', 'PROHIBITED', 'CTR', 'TMZ', 'RMZ', 'TMA', 'TRA', 'TSA', 'FIR',
                  'UIR', 'ADIZ', 'ATZ', 'MATZ', 'AWY', 'MTR', 'ALERT',
                  'WARNING', 'PROTECTED', 'HTZ', 'GLIDING_SECTOR', 'TRP', 'TIZ', 'TIA', 'MTA', 'CTA', 'ACC_SECTOR',
                  'AERIAL_SPORTING_RECREATIONAL', 'OVERFLIGHT_RESTRICTION', 'MRT', 'TFR', 'VFR_SECTOR']
 
 not_in_predef_AY_tags = set()
 for tag in unique_AY_tags:
-    if tag not in prdef_AY_tags:
+    if tag not in predef_AY_tags:
         not_in_predef_AY_tags.add(tag)
 print('AYs not in prdef_AY_tags', not_in_predef_AY_tags)
